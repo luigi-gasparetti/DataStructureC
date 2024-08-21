@@ -95,9 +95,6 @@ void posordem (no *raiz) {
   }
 }
 
-
-
-
 /*******
 Lista as folhas descendentes de um nó x
 

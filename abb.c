@@ -97,7 +97,7 @@ int main() {
   p = insereABB(p, 4);
   p = insereABB(p, 5);
   p = insereABB(p, 6);
-  posordem(p);
+  inordem(p);
   printf("\n");
   p = removeABB(p, 4);
   posordem(p);
