@@ -2,22 +2,21 @@
 
 typedef int chave;
 
-typedef struct cel {
+typedef struct celu {
   chave info;
-  int indice;
   
-  struct cel * prox;
+  struct celu * prox;
 } celula; 
 
 
 void imprimeLista (celula * inicio);
 void imprimeListaIterativo (celula * inicio);
-celula * busca (celula * inicio, chave x);
-celula * buscaIterativa (celula * inicio, chave x);
-celula * insereNoInicio(celula *inicio, chave x);
-celula * insereNoFim (celula * inicio, chave x);
-celula * insereNoFimRec (celula * inicio, chave x);
-celula * removelista (celula * inicio, chave x);
+celula * buscaLISTA (celula * inicio, chave x);
+celula * buscaIterativaLISTA (celula * inicio, chave x);
+celula * insereNoInicioLISTA(celula *inicio, chave x);
+celula * insereNoFimLISTA (celula * inicio, chave x);
+celula * insereNoFimRecLISTA (celula * inicio, chave x);
+celula * removeLISTA (celula * inicio, chave x);
   
   
 

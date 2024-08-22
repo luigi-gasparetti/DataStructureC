@@ -1,6 +1,7 @@
 /* Árvores de Busca Binária */
 
-no * busca (no * raiz, int x);
-no * maximo (no * raiz);
+no * buscaABB (no * raiz, int x);
+no * maximoABB (no * raiz);
+no * minimoABB (no * raiz);
 no * insereABB (no * raiz, int x);
 no * removeABB (no * raiz, int x);

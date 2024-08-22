@@ -3,33 +3,32 @@
 #include <stdlib.h>
 #include "arv.h"
 
-
 /* Busca um elemento na árvore de busca binária
 
 no * busca (no * raiz, int x); 
 
 */
 
-no * busca (no * raiz, int x){
+no * buscaABB (no * raiz, int x){
   if (raiz == NULL || raiz->chave == x)
     return raiz;
   if (x < raiz->chave)
-    return busca (raiz->esq, x);
-  return busca (raiz->dir, x);
+    return buscaABB (raiz->esq, x);
+  return buscaABB (raiz->dir, x);
 }
 
       
 
-no * maximo (no * raiz){
+no * maximoABB (no * raiz){
   if (raiz == NULL || raiz->dir == NULL)
     return raiz;
-  return maximo(raiz->dir);
+  return maximoABB(raiz->dir);
 } 
 
-no * minimo (no * raiz){
+no * minimoABB (no * raiz){
   if (raiz == NULL || raiz->esq == NULL)
     return raiz;
-  return minimo(raiz->esq);
+  return minimoABB(raiz->esq);
 } 
 
 /* Insere um elemento em uma ABB, devolve a raiz da árvore 
@@ -75,7 +74,7 @@ no * removeABB (no * raiz, int x){
       raiz = y;
     }
     else{
-      y = minimo(raiz->dir);
+      y = minimoABB(raiz->dir);
       raiz->chave = y->chave;
       raiz->dir = removeABB(raiz->dir, y->chave);
       /* nao precisa de free, a recursao cuida */
@@ -83,25 +82,4 @@ no * removeABB (no * raiz, int x){
   }
   return raiz;
 }
-
-
-int main() {
-  no * p = NULL;
-  
-  
-  p = insereABB(p, 1);
-  p = insereABB(p, 2);
-  p = insereABB(p, 3);
-  preordem(p);
-  printf("\n");
-  p = insereABB(p, 4);
-  p = insereABB(p, 5);
-  p = insereABB(p, 6);
-  inordem(p);
-  printf("\n");
-  p = removeABB(p, 4);
-  posordem(p);
-  printf("\n");
-}
-
 

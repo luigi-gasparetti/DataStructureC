@@ -1,3 +1,5 @@
+#ifndef ARV_H
+#define ARV_H
 
 typedef struct cel {
   int chave;
@@ -14,3 +16,5 @@ void preordem (no *raiz);
 void posordem (no *raiz);
 void folhasDescendentes (no *x);
 void largura (no *raiz);
+
+#endif // ARV_H
