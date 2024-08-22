@@ -38,3 +38,7 @@ Para compilar o projeto, utilize o comando:
 
 ```bash
 gcc main.c abb.c listasligadas.c fila.c pilha.c -o main
+
+Após compilar, execute:
+
+`./main`
