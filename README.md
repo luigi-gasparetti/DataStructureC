@@ -37,7 +37,7 @@ A **Pilha** é uma estrutura de dados do tipo LIFO (Last In, First Out), onde o 
 Para compilar o projeto, utilize o comando:
 
 ```bash
-gcc main.c abb.c listasligadas.c fila.c pilha.c -o main
+gcc main.c abb.c arv.c pilha.c fila.c listasligadas.c -o main
 ```
 
 Após compilar, execute:
