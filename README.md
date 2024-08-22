@@ -43,4 +43,5 @@ gcc main.c abb.c listasligadas.c fila.c pilha.c -o main
 Após compilar, execute:
 
 ```bash
-./main ```
+./main 
+```
